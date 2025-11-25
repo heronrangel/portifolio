@@ -1,0 +1,381 @@
+:root,
+body {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.profile-image-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #9265B8;
+    margin-bottom: 10px;
+}
+
+#apresentation-margin {
+    margin-top: 7rem;
+    margin-bottom: 24rem;
+}
+
+.social-icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: black;
+    background-color: #e6db74;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    margin: 0 5px;
+}
+
+.social-icon-link:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.social-icon-link.circle {
+    border-radius: 50%;
+}
+
+.social-icon-link.square {
+    border-radius: 5px;
+}
+
+#apresentation-secion {
+    color: #9265B8;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+#detalhe-carousel {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* NAVBAR PERSONALIZADA */
+.custom-navbar {
+    background-color: #212121;
+    border-bottom: 2px solid #30363d;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 5;
+}
+
+.custom-navbar .brand-link {
+    color: #c9d1d9 !important;
+    font-weight: normal;
+    padding: 0.2rem 0;
+    margin-right: 0;
+    text-decoration: none;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-size: 14px;
+    text-align: left;
+}
+
+.brand-name {
+    color: #e6db74;
+}
+
+.brand-title {
+    color: #555;
+}
+
+.navbar-toggler, .navbar-toggler-icon, .navbar-collapse {
+    display: none;
+}
+
+@media (max-width: 639px) {
+    #nav-menu-mobile {
+        background-color: #212121;
+        padding: 10px 20px;
+        border-radius: 0 0 5px 5px;
+        margin-top: 5px;
+    }
+    #nav-menu-mobile .botao-pixel {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+/* ESTILOS PIXEL ART ORIGINAIS RESTAURADOS */
+.botao-pixel {
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1.5px;
+    background-color: #222;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.borda-amarela {
+    border-color: #e6db74;
+    color: #e6db74;
+}
+
+.borda-roxa {
+    border-color: #9265B8;
+    color: #9265B8;
+}
+
+.botao-pixel.active,
+.borda-amarela.active {
+    color: #9265B8 !important;
+    border-color: #9265B8;
+    transform: none;
+}
+
+.borda-amarela:not(.active):hover {
+    border-color: #9265B8;
+    color: #9265B8;
+    transform: translateY(-1px);
+}
+
+.borda-amarela.active:hover {
+    background-color: #e6db74;
+    color: #212121 !important;
+    transform: none;
+}
+
+.borda-roxa:hover {
+    background-color: #9265B8;
+    color: #222;
+}
+
+.item-card {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    background-color: #161b22;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #555;
+    overflow: hidden;
+    padding-top: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item-card .image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px 6px 0 0;
+}
+
+@media (min-width: 768px) {
+    .item-card .image-container {
+        height: 256px;
+    }
+}
+
+.item-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-card:hover img {
+    transform: scale(1.1);
+}
+
+.item-content {
+    padding: 20px;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-icons img {
+    width: 24px;
+    height: 24px;
+    background-color: #161b22;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* ESTILOS PARA NUMERADOR DE LINHAS FIXO */
+
+/* Por padrão, esconde a barra lateral e remove o padding do body */
+#line-numbers {
+    display: none; 
+}
+
+body {
+    /* Mantém o padding base (p-4 sm:p-8) do HTML, removendo o padding forçado do seu CSS anterior */
+    padding-left: initial !important; 
+    padding-top: 1rem !important;
+}
+
+@media (min-width: 640px) {
+    /* Em telas maiores que 640px, exibe a barra lateral */
+    #line-numbers {
+        display: block; 
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 50px; /* Largura para 50px */
+        background-color: #1a1a1a;
+        color: #555;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 14px;
+        overflow: hidden;
+        z-index: 10;
+        user-select: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Adiciona o padding esquerdo ao body para compensar a barra lateral, somando o padding base do HTML */
+    body {
+        padding-left: 66px !important; /* 50px (largura da barra) + 16px (padding esquerdo original do HTML) */
+    }
+}
+
+/* Ajusta o padding em telas MD (768px) se necessário, como no seu código original */
+@media (min-width: 640px) {
+    /* O padding já foi ajustado acima, mas mantemos o ajuste do seu código original (de 640px) */
+    body {
+        /* Se você quiser um padding diferente para SM ou MD, ajuste aqui */
+        padding-left: 82px !important; /* O valor de 82px parece ser para telas >= 640px */
+    }
+}
+
+.line-number-item {
+    line-height: 1.5rem;
+    min-height: 1.5rem;
+    text-align: right;
+    padding-right: 8px;
+    padding-left: 0px;
+}
+
+.filter-buttons-container {
+    margin-top: 1rem;
+}
+
+.tech-stack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 10px 0;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.tech-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 100px;
+    height: 50px;
+    background-color: #161b22;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #30363d;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    object-fit: contain;
+}
+
+.tech-name {
+    color: #c9d1d9;
+    font-size: 11px;
+    font-family: sans-serif;
+    text-align: left;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.img-carousel {
+    border: none;
+}
+
+@media (max-width: 640px) {
+    .tech-stack-grid {
+        gap: 5px;
+        padding: 5px 0;
+    }
+    .tech-card {
+        height: 40px;
+        padding: 3px 6px;
+        min-width: 80px;
+    }
+    .tech-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    .tech-name {
+        font-size: 9px;
+    }
+    #detalhe-link-externo {
+        width: 100%;
+        text-align: center;
+    }
+    .filter-buttons-container {
+        justify-content: center !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .tech-stack-grid {
+        max-width: none;
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+
+.espaco {
+    margin-top: 80px;
+}
+
+.scroll-reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
