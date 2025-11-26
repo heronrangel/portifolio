@@ -3,157 +3,22 @@ body {
     font-family: 'Source Code Pro', monospace;
 }
 
-.profile-image-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #9265B8;
-    margin-bottom: 10px;
+:root {
+    --cor-fundo-principal: #0D1117;
+    --cor-destaque-principal: #58A6FF;
+    --cor-destaque-secundario: #768390;
+    --cor-texto-claro: #C9D1D9;
+    --cor-texto-suave: #8B949E;
+    --cor-borda-suave: #30363D;
+    --cor-navbar-fundo: #161B22;
+    --cor-cta-project: #238636;
 }
 
-#apresentation-margin {
-    margin-top: 7rem;
-    margin-bottom: 24rem;
-}
-
-.social-icon-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    color: black;
-    background-color: #e6db74;
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    margin: 0 5px;
-}
-
-.social-icon-link:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
-}
-
-.social-icon-link.circle {
-    border-radius: 50%;
-}
-
-.social-icon-link.square {
-    border-radius: 5px;
-}
-
-#apresentation-secion {
-    color: #9265B8;
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 500px;
-    margin: 15px auto;
-}
-
-#detalhe-carousel {
-    font-family: 'Source Code Pro', monospace;
-}
-
-/* NAVBAR PERSONALIZADA */
-.custom-navbar {
-    background-color: #212121;
-    border-bottom: 2px solid #30363d;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    z-index: 5;
-}
-
-.custom-navbar .brand-link {
-    color: #c9d1d9 !important;
-    font-weight: normal;
-    padding: 0.2rem 0;
-    margin-right: 0;
-    text-decoration: none;
-}
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-    font-size: 14px;
-    text-align: left;
-}
-
-.brand-name {
-    color: #e6db74;
-}
-
-.brand-title {
-    color: #555;
-}
-
-.navbar-toggler, .navbar-toggler-icon, .navbar-collapse {
-    display: none;
-}
-
-@media (max-width: 639px) {
-    #nav-menu-mobile {
-        background-color: #212121;
-        padding: 10px 20px;
-        border-radius: 0 0 5px 5px;
-        margin-top: 5px;
-    }
-    #nav-menu-mobile .botao-pixel {
-        width: 100%;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-}
-
-/* ESTILOS PIXEL ART ORIGINAIS RESTAURADOS */
-.botao-pixel {
-    display: inline-block;
-    padding: 5px 15px;
-    text-decoration: none;
-    cursor: pointer;
-    line-height: 1;
-    border-style: solid;
-    border-radius: 0px;
-    border-width: 1.5px;
-    background-color: #222;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 16px;
-    transition: all 0.1s ease-in-out;
-}
-
-.borda-amarela {
-    border-color: #e6db74;
-    color: #e6db74;
-}
-
-.borda-roxa {
-    border-color: #9265B8;
-    color: #9265B8;
-}
-
-.botao-pixel.active,
-.borda-amarela.active {
-    color: #9265B8 !important;
-    border-color: #9265B8;
-    transform: none;
-}
-
-.borda-amarela:not(.active):hover {
-    border-color: #9265B8;
-    color: #9265B8;
-    transform: translateY(-1px);
-}
-
-.borda-amarela.active:hover {
-    background-color: #e6db74;
-    color: #212121 !important;
-    transform: none;
-}
-
-.borda-roxa:hover {
-    background-color: #9265B8;
-    color: #222;
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-claro);
+    padding-left: initial !important;
+    padding-top: 1rem !important;
 }
 
 .item-card {
@@ -176,12 +41,6 @@ body {
     height: 200px;
     overflow: hidden;
     border-radius: 6px 6px 0 0;
-}
-
-@media (min-width: 768px) {
-    .item-card .image-container {
-        height: 256px;
-    }
 }
 
 .item-card img {
@@ -221,28 +80,18 @@ body {
     transform: scale(1.2);
 }
 
-/* ESTILOS PARA NUMERADOR DE LINHAS FIXO */
-
-/* Por padrão, esconde a barra lateral e remove o padding do body */
 #line-numbers {
-    display: none; 
-}
-
-body {
-    /* Mantém o padding base (p-4 sm:p-8) do HTML, removendo o padding forçado do seu CSS anterior */
-    padding-left: initial !important; 
-    padding-top: 1rem !important;
+    display: none;
 }
 
 @media (min-width: 640px) {
-    /* Em telas maiores que 640px, exibe a barra lateral */
     #line-numbers {
-        display: block; 
+        display: block;
         position: fixed;
         left: 0;
         top: 0;
         height: 100vh;
-        width: 50px; /* Largura para 50px */
+        width: 50px;
         background-color: #1a1a1a;
         color: #555;
         font-family: 'Source Code Pro', monospace;
@@ -254,18 +103,14 @@ body {
         padding-bottom: 1rem;
     }
 
-    /* Adiciona o padding esquerdo ao body para compensar a barra lateral, somando o padding base do HTML */
     body {
-        padding-left: 66px !important; /* 50px (largura da barra) + 16px (padding esquerdo original do HTML) */
+        padding-left: 82px !important;
     }
 }
 
-/* Ajusta o padding em telas MD (768px) se necessário, como no seu código original */
-@media (min-width: 640px) {
-    /* O padding já foi ajustado acima, mas mantemos o ajuste do seu código original (de 640px) */
-    body {
-        /* Se você quiser um padding diferente para SM ou MD, ajuste aqui */
-        padding-left: 82px !important; /* O valor de 82px parece ser para telas >= 640px */
+@media (min-width: 768px) {
+    .item-card .image-container {
+        height: 256px;
     }
 }
 
@@ -274,7 +119,6 @@ body {
     min-height: 1.5rem;
     text-align: right;
     padding-right: 8px;
-    padding-left: 0px;
 }
 
 .filter-buttons-container {
@@ -311,7 +155,6 @@ body {
     width: 35px;
     height: 35px;
     margin-right: 8px;
-    margin-bottom: 0;
     object-fit: contain;
 }
 
@@ -327,40 +170,35 @@ body {
     flex-grow: 1;
 }
 
-.img-carousel {
-    border: none;
-}
-
 @media (max-width: 640px) {
     .tech-stack-grid {
         gap: 5px;
         padding: 5px 0;
     }
+
     .tech-card {
         height: 40px;
         padding: 3px 6px;
         min-width: 80px;
     }
+
     .tech-icon {
         width: 25px;
         height: 25px;
         margin-right: 5px;
     }
+
     .tech-name {
         font-size: 9px;
     }
+
     #detalhe-link-externo {
         width: 100%;
         text-align: center;
     }
+
     .filter-buttons-container {
         justify-content: center !important;
-    }
-}
-
-@media (min-width: 768px) {
-    .tech-stack-grid {
-        max-width: none;
     }
 }
 
@@ -371,11 +209,193 @@ body {
     transition-delay: var(--delay, 0s);
 }
 
+.scroll-reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .espaco {
     margin-top: 80px;
 }
 
-.scroll-reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
+.custom-navbar {
+    background-color: var(--cor-navbar-fundo);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+    border-bottom: 1px solid var(--cor-borda-suave);
+}
+
+.profile-image-large {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--cor-destaque-principal);
+    box-shadow: 0 0 0 1px var(--cor-borda-suave);
+}
+
+.minimal-button {
+    padding: 8px 16px;
+    font-weight: 600;
+    border: 1px solid var(--cor-borda-suave);
+    color: var(--cor-texto-claro);
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: var(--cor-navbar-fundo);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minimal-button:hover,
+.minimal-button.active {
+    border-color: var(--cor-destaque-principal);
+    color: var(--cor-destaque-principal);
+    background-color: var(--cor-navbar-fundo);
+}
+
+.primary-button {
+    background-color: var(--cor-cta-project);
+    border: 1px solid var(--cor-cta-project);
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background-color: #2ea043;
+    border-color: #2ea043;
+    color: #ffffff;
+}
+
+.social-icon-profile {
+    color: var(--cor-texto-suave);
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.social-icon-profile-link {
+    color: var(--cor-texto-suave);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-icon-profile-link:hover {
+    color: var(--cor-destaque-principal);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding-bottom: 5px;
+    color: var(--cor-texto-claro) !important;
+    font-size: 2.25rem;
+}
+
+.separator {
+    border-color: var(--cor-borda-suave);
+}
+
+.content-section {
+    padding: 60px 0;
+}
+
+.project-card {
+    aspect-ratio: 1 / 1;
+    background-color: var(--cor-navbar-fundo);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    border-color: var(--cor-destaque-principal);
+}
+
+.main-profile-card {
+    background-color: var(--cor-navbar-fundo);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--cor-texto-suave);
+    justify-content: flex-start;
+}
+
+.profile-info-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+#detalhes-projeto {
+    margin-top: 3rem;
+}
+
+.dev-badge {
+    background-color: var(--cor-borda-suave);
+    color: var(--cor-texto-suave);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.project-link-text {
+    color: var(--cor-destaque-principal);
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.project-link-text:hover {
+    text-decoration: underline;
+}
+
+.project-tech-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+#nav-toggle svg {
+    stroke: var(--cor-destaque-principal) !important;
+}
+
+@media (max-width: 767px) {
+    .main-profile-card .md\:col-span-1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-profile-card .md\:col-span-2 {
+        text-align: center;
+    }
+
+    .main-profile-card .profile-info-item {
+        justify-content: center;
+    }
+
+    .main-profile-card .project-tech-icon {
+        margin: 0.25rem;
+    }
+}
+
+#detalhe-imagem-estatica {
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 6px;
 }
