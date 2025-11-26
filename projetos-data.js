@@ -24,7 +24,6 @@ const projetos = {
       { src: net_icon, alt: ".NET MAUI" },
       { src: xamarin_icon, alt: "Xamarin Forms" },
       { src: sqlite_icon, alt: "SQLite" },
-      { src: json_icon, alt: "JSON" },
       { src: android_icon, alt: "Android" },
       { src: ios_icon, alt: "iOS" }
     ],
@@ -42,7 +41,6 @@ const projetos = {
       { src: net_icon, alt: ".NET MAUI" },
       { src: xamarin_icon, alt: "Xamarin Forms" },
       { src: sqlite_icon, alt: "SQLite" },
-      { src: json_icon, alt: "JSON" },
       { src: android_icon, alt: "Android" },
       { src: ios_icon, alt: "iOS" }
     ],
@@ -59,7 +57,6 @@ const projetos = {
     tecnologias: [
       { src: csharp_icon, alt: "C#" },
       { src: net_icon, alt: ".NET Framework" },
-      { src: json_icon, alt: "JSON" },
       { src: access_icon, alt: "Access" }
     ],
     descricaoCurta: 'Software de geração de certificados para APIs bancárias.',
@@ -75,7 +72,6 @@ const projetos = {
       { src: vba_icon, alt: "VBA" },
       { src: access_icon, alt: "Access" },
       { src: woo_icon, alt: "WooCommerce" },
-      { src: json_icon, alt: "JSON" },
       { src: wordpress_icon, alt: "WordPress" }
     ],
     descricaoCurta: 'Software integrador de lojas e-commerce.',
@@ -158,8 +154,7 @@ const projetos = {
     categoria: 'desktop',
     tecnologias: [
       { src: csharp_icon, alt: "C#" },
-      { src: net_icon, alt: ".NET Framework" },
-      { src: json_icon, alt: "JSON" }
+      { src: net_icon, alt: ".NET Framework" }
     ],
     descricaoCurta: 'Gerenciador SFTP.',
     descricaoCompleta: 'Este software facilita o gerenciamento de arquivos e versões de um sistema ERP. Com ele, é possível criar uma lista de processos que devem ser executados, como o envio de arquivos para um servidor SFTP. Também é possível definir se o arquivo será compactado antes do envio ou enviado em sua forma original.',
@@ -202,8 +197,7 @@ const projetos = {
     tecnologias: [
       { src: wordpress_icon, alt: "WordPress" },
       { src: php_icon, alt: "PHP" },
-      { src: js_icon, alt: "JavaScript" },
-      { src: json_icon, alt: "JSON" }
+      { src: js_icon, alt: "JavaScript" }
     ],
     descricaoCurta: 'Site Central de Ajuda SysOpRS.',
     descricaoCompleta: 'O site da Central de Ajuda do SisOp reúne mais de 550 manuais e tutoriais sobre os diversos módulos do sistema, oferecendo suporte completo aos usuários. Além da seção pública de conteúdo, conta com um painel de moderação totalmente personalizado, que permite a criação de novos manuais, atualização de conteúdos existentes e gerenciamento de contatos, garantindo um suporte ágil e organizado.',
@@ -232,8 +226,7 @@ const projetos = {
     tecnologias: [
       { src: wordpress_icon, alt: "WordPress" },
       { src: php_icon, alt: "PHP" },
-      { src: js_icon, alt: "JavaScript" },
-      { src: json_icon, alt: "JSON" }
+      { src: js_icon, alt: "JavaScript" }
     ],
     descricaoCurta: 'Site WL-TecField.',
     descricaoCompleta: 'O site da WL-TecField apresenta os equipamentos de caixa de auto-atendimento oferecidos pela empresa, destacando suas funcionalidades e diferenciais. Além disso, a plataforma conta com uma seção dedicada ao recrutamento de técnicos em todo o Brasil, facilitando a candidatura e gestão de novos profissionais.',
