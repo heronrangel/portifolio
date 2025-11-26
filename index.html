@@ -5,90 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Heron Rangel Agostinho</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css"> 
 </head>
-<body id="inicio" class="bg-[#212121] min-h-screen text-white p-4 sm:p-8">
-
-    <div id="secion-inicio" class="espaco"></div>
-
-    <nav class="custom-navbar fixed top-0 left-0 right-0 w-full px-4 sm:px-8">
+<body id="inicio" class="min-h-screen p-4 sm:p-8">
+    <nav class="custom-navbar fixed top-0 left-0 right-0 w-full px-4 sm:px-8 shadow-xl">
         <div class="max-w-6xl mx-auto flex justify-between items-center py-2">
-            <a class="brand-link" href="#inicio">
-                <div class="brand-text">
-                    <span class="brand-name">// Heron Rangel Agostinho</span>
-                    <span class="brand-title">// Desenvolvedor FullStack</span>
+            <a class="text-white hover:text-var(--cor-destaque-principal) transition duration-200" href="#inicio">
+                <div class="flex flex-col leading-none">
+                    <span class="text-lg font-bold">// Heron Agostinho</span>
+                    <span class="text-sm font-light" style="color: var(--cor-texto-suave);">// Desenvolvedor FullStack</span>
                 </div>
             </a>
-            <button id="nav-toggle" class="sm:hidden text-[#e6db74] focus:outline-none" aria-label="Toggle navigation">
+            <button id="nav-toggle" class="sm:hidden focus:outline-none" aria-label="Toggle navigation" style="color: var(--cor-destaque-principal);">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
                     <path id="nav-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     <path id="nav-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            <div id="navbarNav-desktop" class="hidden sm:flex items-center space-x-2">
-                <a id="quem-sou-link-desktop" class="botao-pixel borda-amarela support-link" href="#inicio">Quem Sou</a>
-                <a id="meus-projetos-link-desktop" class="botao-pixel borda-amarela support-link" href="#secion-project">Meus Projetos</a>
+            <div id="navbarNav-desktop" class="hidden sm:flex items-center space-x-3">
+                <a id="quem-sou-link-desktop" class="minimal-button" href="#inicio">Quem Sou</a>
+                <a id="meus-projetos-link-desktop" class="minimal-button" href="#secion-project">Projetos</a>
             </div>
         </div>
-        <div id="nav-menu-mobile" class="hidden sm:hidden flex flex-col mt-1 mb-2 space-y-1">
-            <a id="quem-sou-link-mobile" class="botao-pixel borda-amarela support-link" href="#inicio">Quem Sou</a>
-            <a id="meus-projetos-link-mobile" class="botao-pixel borda-amarela support-link" href="#secion-project">Meus Projetos</a>
+        <div id="nav-menu-mobile" class="hidden sm:hidden flex flex-col mt-1 mb-2 space-y-2 p-2" style="background-color: var(--cor-navbar-fundo);">
+            <a id="quem-sou-link-mobile" class="minimal-button w-full text-center" href="#inicio">Quem Sou</a>
+            <a id="meus-projetos-link-mobile" class="minimal-button w-full text-center" href="#secion-project">Projetos</a>
         </div>
     </nav>
 
     <div id="line-numbers"></div>
 
-    <div class="flex flex-col items-center w-full">
-        <div class="w-full max-w-6xl" id="pagInicial">
-            <div id="apresentation-margin">
-                <div class="flex flex-col items-center justify-center pt-20 pb-10 scroll-reveal" data-delay="0s">
-                    <img src="./assets/images/heron.JPG" alt="Heron" class="profile-image-circle">
-                    <h1 class="text-3xl font-bold text-[#e6db74] text-center">Heron Rangel Agostinho</h1>
-                    <a id="apresentation-secion" class="scroll-reveal" data-delay="0.1s">Desenvolvedor com 3 anos de experiência. Minha carreira é um portfólio de desafios superados, com projetos como o desenvolvimento de apps para gestão até integrações com e-commerce e meios de pagamento.</a>
-                    <div class="flex mt-4 mb-4 scroll-reveal" data-delay="0.1s">
-                        <a href="https://www.linkedin.com/in/heron-rangel-agostinho/" target="_blank" class="social-icon-link circle">
-                            <i class="fab fa-linkedin-in fa-lg"></i>
-                        </a>
-                        <a href="https://github.com/heronrangel" target="_blank" class="social-icon-link circle">
-                            <i class="fab fa-github fa-lg"></i>
-                        </a>
-                        <a href="https://www.instagram.com/_heronrangel/" target="_blank" class="social-icon-link circle">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a href="mailto:heronlennon@gmail.com" target="_blank" class="social-icon-link circle">
-                            <i class="fas fa-envelope fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="flex flex-col items-center w-full content-section">
+        <div class="w-full max-w-6xl px-4" id="pagInicial">
+            <div class="pt-24 pb-12">
+                <div class="main-profile-card">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <div class="md:col-span-1 flex flex-col items-center md:items-center text-center md:text-left">
+                            <img src="./assets/images/heron.JPG" alt="Heron" class="profile-image-large mb-4">
+                            
+                            <div class="mt-4 w-full">
+                                <div class="profile-info-item justify-center">
+                                    <i class="fab fa-instagram"></i> 
+                                    <a href="https://www.instagram.com/_heronrangel/" target="_blank" class="project-link-text">_heronrangel</a>
+                                </div>
+                                 <div class="profile-info-item justify-center">
+                                    <i class="fab fa-linkedin-in"></i> 
+                                    <a href="https://www.linkedin.com/in/heron-rangel-agostinho/" target="_blank" class="project-link-text">Heron Rangel Agostinho</a>
+                                </div>
+                                <div class="profile-info-item justify-center">
+                                    <i class="fab fa-github"></i> 
+                                    <a href="https://github.com/heronrangel" target="_blank" class="project-link-text">heronrangel</a>
+                                </div>
+                                <div class="profile-info-item justify-center">
+                                    <i class="fas fa-envelope"></i> 
+                                    <a href="mailto:heronlennon@gmail.com" target="_blank" class="project-link-text">heronlennon@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
 
-            <h1 id="secion-project" class="text-3xl font-bold text-[#e6db74] text-center">
+                        <div class="md:col-span-2">
+                            <h2 class="text-3xl font-bold text-white mb-2">Heron Rangel Agostinho</h2>
+                            <span class="dev-badge">Desenvolvedor FullStack</span>
+
+                            <p class="text-lg leading-relaxed mt-4" style="color: var(--cor-texto-claro);">
+                                Olá, me chamo Heron Rangel Agostinho, tenho 28 anos e sou natural do Rio Grande do Sul.
+                                Atualmente, curso Análise e Desenvolvimento de Sistemas na Universidade LaSalle e 
+                                atuo na área de programação há 3 anos. Minha carreira é um portfólio de desafios 
+                                superados, com projetos como o desenvolvimento de apps para gestão até integrações 
+                                com e-commerce e meios de pagamento.
+                            </p>
+                            
+                            <h3 class="text-xl font-semibold mt-6 mb-2" style="color: var(--cor-texto-claro);">Tecnologias</h3>
+                            <div class="flex flex-wrap gap-3 mt-3">
+                                <img src="https://skillicons.dev/icons?i=cs" alt="C#" class="project-tech-icon" title="C#">
+                                <img src="./assets/images/languages/access_icon.svg" alt="VBA" class="project-tech-icon" title="VBA">
+                                <img src="https://skillicons.dev/icons?i=php" alt="PHP" class="project-tech-icon" title="PHP">
+                                <img src="https://skillicons.dev/icons?i=html" alt="HTML5" class="project-tech-icon" title="HTML5">
+                                <img src="https://skillicons.dev/icons?i=css" alt="CSS3" class="project-tech-icon" title="CSS3">
+                                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="project-tech-icon" title="JavaScript">
+                                <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" class="project-tech-icon" title="Bootstrap">
+                            </div>
+                        </div>
+                    </div>
+                </div> </div>
+            
+            <hr class="separator my-10"> 
+
+            <h1 id="secion-project" class="text-3xl font-bold text-center section-title mx-auto">
                 Meus Projetos
             </h1>
-            <div id="secion-projetos" class="flex space-x-4 mb-10 justify-center filter-buttons-container mt-24 scroll-reveal" data-delay="0.3s">
-                <a href="#todos" data-filter="all" class="botao-pixel borda-amarela active">Todos</a>
-                <a href="#mobile" data-filter="mobile" class="botao-pixel borda-amarela">Mobile</a>
-                <a href="#desktop" data-filter="desktop" class="botao-pixel borda-amarela">Desktop</a>
-                <a href="#web" data-filter="web" class="botao-pixel borda-amarela">Web</a>
+            
+            <div id="secion-projetos" class="flex flex-wrap space-x-2 justify-center mt-8 mb-12 scroll-reveal" data-delay="0.3s">
+                <a href="#todos" data-filter="all" class="minimal-button active mt-2">Todos</a>
+                <a href="#mobile" data-filter="mobile" class="minimal-button mt-2">Mobile</a>
+                <a href="#desktop" data-filter="desktop" class="minimal-button mt-2">Desktop</a>
+                <a href="#web" data-filter="web" class="minimal-button mt-2">Web</a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="portfolio-grid"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid"></div>
         </div>
 
         <div id="carousel-container"></div>
-        <div id="detalhes-projeto" class="hidden w-full max-w-6xl p-6 sm:p-0">
-            <a href="#" id="voltar-portfolio" class="botao-pixel borda-amarela mb-12">&lt; voltar</a>
-            <h2 id="detalhe-titulo" class="text-4xl font-bold mb-6 text-[#e6db74]"></h2>
-            <div class="rounded-lg mb-8 flex justify-start items-start" id="detalhe-imagem-estatica">
-                <img id="detalhe-imagem-src" class="object-contain h-auto w-full rounded-lg img-fluid" alt="Imagem do Projeto" src="">
+        <div id="detalhes-projeto" class="hidden w-full max-w-4xl px-4 p-6 sm:p-0">
+            <a href="#" id="voltar-portfolio" class="minimal-button mb-10">&lt; Voltar</a>
+            
+            <h2 id="detalhe-titulo" class="text-3xl font-bold mb-4" style="color: var(--cor-texto-claro);"></h2>
+            
+            <div class="mb-8 overflow-hidden rounded-lg shadow-xl" id="detalhe-imagem-estatica">
+                <img id="detalhe-imagem-src" class="object-contain h-auto w-full img-fluid" alt="Imagem do Projeto" src="">
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-[#9265B8]">Projeto</h3>
-            <p id="detalhe-descricao" class="text-lg leading-relaxed text-white mb-10"></p>
-            <h3 class="text-2xl font-bold mb-3 text-[#9265B8]">Tecnologias</h3>
+            
+            <h3 class="text-xl font-bold mb-3" style="color: var(--cor-texto-claro);">Projeto</h3>
+            <p id="detalhe-descricao" class="text-lg leading-relaxed mb-10" style="color: var(--cor-texto-suave);"></p>
+            
+            <h3 class="text-xl font-bold mb-3" style="color: var(--cor-texto-claro);">Tecnologias</h3>
             <div class="tech-stack-grid ml-0 mb-10" id="detalhe-tech-stack"></div>
-            <a id="detalhe-link-externo" href="#" target="_blank" class="botao-pixel borda-amarela hidden">ver projeto ao vivo</a>
+            
+            <a id="detalhe-link-externo" href="#" target="_blank" class="minimal-button primary-button hidden">Ver Projeto ao Vivo</a>
         </div>
     </div>
 
