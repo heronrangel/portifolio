@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Referências de Elementos
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu-mobile");
     const navIconOpen = document.getElementById("nav-icon-open");
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const voltarBotao = document.getElementById('voltar-portfolio');
     const filterButtons = document.querySelectorAll('[data-filter]');
 
-    // Lógica do Navbar Toggler
     if (navToggle && navMenu) {
         const toggleMenu = () => {
             navMenu.classList.toggle("hidden");
@@ -22,10 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.addEventListener("click", toggleMenu);
     }
 
-    // Geração dos Números de Linha
     function generateLineNumbers() {
         const lineNumbersContainer = document.getElementById('line-numbers');
-        // Ajuste conforme o número final de linhas no seu HTML
         const totalLines = 205 + 24; 
         let numbersHTML = '';
         for (let i = 1; i <= totalLines; i++) {
@@ -34,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lineNumbersContainer.innerHTML = numbersHTML;
     }
 
-    // Criação do HTML do Cartão de Projeto
     function createProjectCardHtml(id, projeto, index) {
         const delay = 0.1 + (index * 0.05);
         const limitedTechIcons = projeto.tecnologias.slice(0, 10).map(tech => `<img src="${tech.src}" alt="${tech.alt}" title="${tech.alt}">`).join('');
@@ -54,14 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="tech-icons">
                         ${limitedTechIcons}
                     </div>
-                    <h3 class="font-bold text-lg mb-2 text-[#e6db74]">${projeto.titulo}</h3>
-                    <p class="text-sm text-[#9265B8]">${snippetDescricao}</p>
+                    <h3 class="font-bold text-lg mb-2 text-[white]">${projeto.titulo}</h3>
+                    <p class="text-sm text-[#768390]">${snippetDescricao}</p>
                 </div>
             </a>
         `;
     }
 
-    // Renderização do Grid de Portfólio
     function renderPortfolioGrid() {
         let allCardsHtml = '';
         let index = 0;
@@ -78,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Função para reverter a visualização e rolar para o hash
     function resetToInitialView(event, hash) {
         if (event) event.preventDefault();
         detalhesProjetoContainer.classList.add('hidden');
@@ -101,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Manipuladores de Eventos para Links de Navegação
     document.getElementById('quem-sou-link-desktop').addEventListener('click', (e) => {
         resetToInitialView(e, '#inicio');
     });
@@ -117,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!navMenu.classList.contains('hidden')) navToggle.click();
     });
 
-    // Manipulador de Evento para Clicar no Cartão
     portfolioGrid.addEventListener('click', (e) => {
         const card = e.target.closest('.item-card');
         if (!card) return;
@@ -170,15 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Botão Voltar
     voltarBotao.addEventListener('click', (e) => {
         resetToInitialView(e, '#inicio');
     });
 
-    // Renderização Inicial
     renderPortfolioGrid();
 
-    // Lógica de Filtragem
     function filterPortfolio(category) {
         filterButtons.forEach(btn => btn.classList.remove('active'));
         const clickedButton = document.querySelector(`[data-filter="${category}"]`);
@@ -212,7 +200,6 @@ document.addEventListener('DOMContentLoaded', () => {
     filterPortfolio('all');
     generateLineNumbers();
 
-    // Lógica de Scroll Reveal
     const observerOptions = {
         root: null,
         rootMargin: '0px',
